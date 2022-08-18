@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/class-diagram
+class ShoppingCart
+class Product <<interface>>
+class Keyboard
+class Mouse
+class ProductFactory
+
+ShoppingCart --> ProductFactory
+Keyboard --|> ProductFactory
+
+ProductFactory ..> Keyboard
+ProductFactory ..> Mouse
+
+
+Mouse --|> Product
+ShoppingCart "<<creates>>"..> Keyboard
+ShoppingCart ..> Mouse
+
+@enduml
