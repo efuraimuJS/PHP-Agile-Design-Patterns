@@ -1,0 +1,11 @@
+@startuml
+class Cart <<interface>>
+class CartProxy
+class ShoppingCart
+class DatabaseClient
+
+CartProxy "<<delegates>>"--> ShoppingCart
+CartProxy --> DatabaseClient
+CartProxy ..|> Cart
+ShoppingCart ..|> Cart
+@enduml

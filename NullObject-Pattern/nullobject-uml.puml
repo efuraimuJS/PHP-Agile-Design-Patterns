@@ -1,0 +1,15 @@
+@startuml
+class Product <<interface>>
+class NullProduct
+class Keyboard
+
+class Persistence
+
+Persistence --> Product
+NullProduct --|> Product
+Keyboard --|> Product
+
+Persistence "<<creates>>"..> NullProduct
+Persistence "<<creates>>"..> Keyboard
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+class ShoppingCart
+
+class CartGateway <<interface>>{
+    +Persist(:Cart)
+    +Retrieve(id):Cart
+
+}
+class InMemoryCart
+class DatabaseCart
+class FileCart
+
+CartGateway --> ShoppingCart
+
+InMemoryCart ..|> CartGateway
+DatabaseCart ..|> CartGateway
+FileCart ..|> CartGateway
+@enduml

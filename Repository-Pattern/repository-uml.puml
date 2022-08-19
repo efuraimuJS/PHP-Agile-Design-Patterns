@@ -1,0 +1,18 @@
+@startuml
+class Client
+class Repository
+Class Gateway <<interface>>
+class Factory <<interface>>
+
+class FactoryImplem
+class Gatewayimplem
+class FileSystem
+
+Client --> Repository
+Repository --> Gateway
+Repository --> Factory
+
+Gatewayimplem ..|> Gateway
+Gateway --> FileSystem
+FactoryImplem ..|> Factory
+@enduml
