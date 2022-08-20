@@ -1,0 +1,19 @@
+@startuml
+class TotalPriceCalculator{
++compute()
+}
+
+class PriceCalculator<<interface>>{
++applyDiscounts()
++addTaxes()
++convertCurrency()
+}
+
+class USAPriceStrategy
+class EuropePriceStrategy
+
+
+TotalPriceCalculator --> PriceCalculator
+USAPriceStrategy --|> PriceCalculator
+EuropePriceStrategy --|> PriceCalculator
+@enduml
