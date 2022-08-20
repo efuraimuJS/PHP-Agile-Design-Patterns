@@ -1,0 +1,19 @@
+@startuml
+class Template <<abstract>>{
+#commonMethod()
+#commonMethod2()
+}
+
+class implement1{
++otherMethod()
++otherMethod2()
+}
+class implement2{
++otherMethod()
++otherMethod2()
+}
+
+Template <|.."<<implements>>" implement1
+Template <|.."<<implements>>" implement2
+
+@enduml
