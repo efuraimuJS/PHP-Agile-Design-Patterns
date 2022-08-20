@@ -1,11 +1,13 @@
 <?php
 
-class FileCart implements CartGateway{
+class FileCart implements CartGateway
+{
 
     private $fileId;
 
     public function __construct()
-    {$this->fileId = uniqid();
+    {
+        $this->fileId = uniqid();
     }
 
     /**

@@ -22,9 +22,10 @@ class ProductTypes
         return $this->makeAllForTypes($allTypes);
     }
 
-    function findComputerHardware(){
+    function findComputerHardware()
+    {
         $allTypes = $this->gateway->retrieveAlltypes();
-        $hardwareTypes = array_filter($allTypes, function ($item){
+        $hardwareTypes = array_filter($allTypes, function ($item) {
             return $item['group'] == 'ComputerHardware';
         });
         return $this->makeAllForTypes($hardwareTypes);

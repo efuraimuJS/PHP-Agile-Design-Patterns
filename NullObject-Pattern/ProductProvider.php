@@ -2,6 +2,7 @@
 // Provide products of various Types.
 // i.e. a gateway, repository/ Database access layer.
 require_once 'NullProduct.php';
+
 class ProductProvider
 {
 

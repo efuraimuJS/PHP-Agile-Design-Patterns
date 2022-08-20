@@ -1,6 +1,7 @@
 <?php
 
-class Mouse implements Product{
+class Mouse implements Product
+{
 
     /**
      * @return mixed

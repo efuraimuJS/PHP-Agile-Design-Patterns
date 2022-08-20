@@ -32,7 +32,8 @@ class NullObjectPatternTest extends TestCase
         }
     }
 
-    function testReceiptCanAddProductsToItTotal(){
+    function testReceiptCanAddProductsToItTotal()
+    {
         $receipt = new Receipt();
 
         $product = new Keyboard();

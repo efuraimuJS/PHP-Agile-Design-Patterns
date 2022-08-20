@@ -1,8 +1,11 @@
 <?php
 
-interface Product{
+interface Product
+{
     function getPrice();
+
     function getPicture();
+
     function getDescription();
 
 

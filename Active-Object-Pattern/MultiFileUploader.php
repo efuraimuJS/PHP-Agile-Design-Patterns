@@ -20,7 +20,7 @@ class MultiFileUploader
     public function run()
     {
 //        foreach ($this->uploaders as $uploader) $uploader->execute();
-        while(!empty($this->uploaders)){
+        while (!empty($this->uploaders)) {
             $uploader = array_shift($this->uploaders);
             $uploader->execute();
         }

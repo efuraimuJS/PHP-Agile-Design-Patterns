@@ -1,6 +1,7 @@
 <?php
 
-class Keyboard implements Product{
+class Keyboard implements Product
+{
 
     /**
      * @return mixed

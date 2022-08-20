@@ -1,5 +1,6 @@
 <?php
 
-interface PaymentMethod{
+interface PaymentMethod
+{
     function execute();
 }

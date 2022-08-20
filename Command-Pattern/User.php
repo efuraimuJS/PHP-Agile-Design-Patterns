@@ -1,7 +1,11 @@
 <?php
-class User{
+
+class User
+{
     private $paymentMethod;
-    function getPaymentMethod(){
+
+    function getPaymentMethod()
+    {
         //VisaPayment or PayPalPayment
         return $this->paymentMethod;
     }

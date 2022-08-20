@@ -1,13 +1,16 @@
 <?php
-class InMemoryCart implements CartGateway {
-    private $listOfCarts =array();
+
+class InMemoryCart implements CartGateway
+{
+    private $listOfCarts = array();
+
     /**
      * @param $cartId
      * @return mixed
      */
     function retrieve($cartId)
     {
-       return $this->listOfCarts[$cartId];
+        return $this->listOfCarts[$cartId];
     }
 
     /**

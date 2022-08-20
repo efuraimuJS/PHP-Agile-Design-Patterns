@@ -1,5 +1,7 @@
 <?php
-class VisaPayment implements PaymentMethod{
+
+class VisaPayment implements PaymentMethod
+{
 
     /**
      * @return mixed

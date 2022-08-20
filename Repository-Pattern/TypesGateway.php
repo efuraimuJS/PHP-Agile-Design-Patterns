@@ -1,6 +1,9 @@
 <?php
-class TypesGateway{
-    function retrieveAlltypes(){
 
-}
+class TypesGateway
+{
+    function retrieveAlltypes()
+    {
+
+    }
 }

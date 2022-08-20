@@ -1,4 +1,6 @@
 <?php
-interface Cart{
+
+interface Cart
+{
     function getProducts();
 }

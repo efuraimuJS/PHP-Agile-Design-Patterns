@@ -1,12 +1,14 @@
 <?php
-class NullProduct implements Product{
+
+class NullProduct implements Product
+{
 
     /**
      * @return mixed
      */
     function getPrice()
     {
-       return 0;
+        return 0;
     }
 
     /**
@@ -22,6 +24,6 @@ class NullProduct implements Product{
      */
     function getDescription()
     {
-       return '';
+        return '';
     }
 }

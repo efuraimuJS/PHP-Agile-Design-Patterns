@@ -1,10 +1,13 @@
 <?php
-class ProductFactory{
-    function makeProductFrodId($productId){
-        if($this->isKeyboard($productId)){
+
+class ProductFactory
+{
+    function makeProductFrodId($productId)
+    {
+        if ($this->isKeyboard($productId)) {
             return new Keyboard();
 
-        }else{
+        } else {
             return new Mouse();
         }
     }

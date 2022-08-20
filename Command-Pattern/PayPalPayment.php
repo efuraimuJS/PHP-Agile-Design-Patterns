@@ -1,7 +1,9 @@
 <?php
 
 require_once 'PaymentMethod.php';
-class PayPalPayment implements PaymentMethod{
+
+class PayPalPayment implements PaymentMethod
+{
 
     /**
      * @return mixed

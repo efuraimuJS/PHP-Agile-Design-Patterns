@@ -1,18 +1,20 @@
 <?php
 
-class ShoppingCart{
+class ShoppingCart
+{
     private $productsInTheCart = array();
     private $productFactory;
 
     function __construct()
-    {$this->productFactory = new ProductFactory();
+    {
+        $this->productFactory = new ProductFactory();
     }
 
 
-    function add($productId){
+    function add($productId)
+    {
         $this->productsInTheCart[] = $this->productFactory->makeProductFrodId($productId);
     }
-
 
 
 }

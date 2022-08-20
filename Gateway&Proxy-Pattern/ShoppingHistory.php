@@ -11,9 +11,10 @@ class ShoppingHistory
         $this->shoppingCartIds = $ids;
     }
 
-    function listAllCarts(){
+    function listAllCarts()
+    {
         $shoppingCarts = array();
-        foreach ($this->shoppingCartIds as $cartId){
+        foreach ($this->shoppingCartIds as $cartId) {
             $shoppingCarts = $this->gateway->retrieve($cartId);
         }
 
