@@ -1,0 +1,19 @@
+@startuml
+class Sensor
+class Command <<interface>>{
++execute()
++undo()
+}
+
+Sensor --> Command
+
+class ProcessPayment
+class User{
++getPaymentMethod()
+}
+
+ProcessPayment --> User
+ProcessPayment --> Command
+
+User "<<create>>"..> Command
+@enduml

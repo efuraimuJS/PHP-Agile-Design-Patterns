@@ -1,0 +1,13 @@
+@startuml
+class ActiveObject{
++Run()
+}
+
+class Command1
+class Command2
+class Command<<N>>
+ActiveObject --> Command1
+ActiveObject --> Command2
+ActiveObject --> Command
+
+@enduml
