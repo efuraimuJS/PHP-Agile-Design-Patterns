@@ -1,0 +1,24 @@
+@startuml
+
+class Subject<<abstract>>{
++register(Observer)
+#notify()
+}
+
+class Observer<<interface>>{
++update()
+}
+
+class RealSubject
+class ObserverImplementation
+
+Subject --> Observer
+RealSubject --|> Subject
+
+ObserverImplementation --> Observer
+ObserverImplementation --> RealSubject
+ObserverImplementation --> Subject
+
+
+
+@enduml
