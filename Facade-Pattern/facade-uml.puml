@@ -1,0 +1,23 @@
+@startuml
+class Application
+class ClientData
+class TopPayments
+class ClientPersonalData
+class PaymentHistory
+
+class ClientFacade{
++getDetailedInfo(clientId)
++storeAllDetails(:ClientData)
+}
+
+Application --> ClientData
+
+Application --> ClientFacade
+
+ClientFacade --> TopPayments
+ClientFacade --> ClientPersonalData
+ClientFacade --> PaymentHistory
+ClientFacade --> ClientData
+
+
+@enduml
