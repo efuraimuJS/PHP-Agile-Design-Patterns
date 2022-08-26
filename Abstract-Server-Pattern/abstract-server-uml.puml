@@ -1,0 +1,13 @@
+@startuml
+class ShopOwner
+class RedRose{
++sell()
++isSold()
+
+}
+class Roses<<interface>>{
++sell()
++isSold()
+}
+ShopOwner "<<creates>>"-->"<<Uses>>" RedRose
+@enduml

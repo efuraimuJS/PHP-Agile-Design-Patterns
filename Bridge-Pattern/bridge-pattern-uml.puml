@@ -1,0 +1,59 @@
+@startuml
+class DirectBuyer
+
+class DirectPayment<<interface>>{
++send()
++approve()
+
+}
+
+DirectBuyer --> DirectPayment
+
+
+
+class CreditPayment<<interface>>{
++send()
++approve()
+}
+
+class CreditBuyer
+
+CreditBuyer --> CreditPayment
+DirectPayment --|> CreditPayment
+CreditPayment --|> DirectPayment
+
+class PaymentMethod<<abstract>>{
+#sendImplementation()
+#approveImplementation()
++send()
++approve()
+}
+
+PaymentMethod --|> CreditPayment
+PaymentMethod --|> DirectPayment
+
+class PaymentSource<<interface>>{
++send()
++approve()
+}
+class Visa
+class MasterCard
+Visa  --|> PaymentSource
+MasterCard  --|> PaymentSource
+PaymentMethod --> PaymentSource
+
+class DirectPaymentMethod{
++send()
++approve()
+}
+class CreditPaymentMethod{
++send()
++approve()
+}
+
+CreditPaymentMethod --|> PaymentMethod
+DirectPaymentMethod--|> PaymentMethod
+
+
+
+@enduml

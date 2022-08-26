@@ -1,0 +1,36 @@
+@startuml
+class ProductInterface{
+getDescription()
+getPrice()
+getPicture()
+sell()
+}
+
+class Keyboard
+class Mouse
+
+class RosesToProductAdapter
+
+RosesToProductAdapter --|> ProductInterface
+RosesToProductAdapter "<<delegates>>"--> WhiteRose
+RosesToProductAdapter "<<delegates>>"--> RedRose
+
+class OldRosesInterface{
+sell()
+showimages()
+getPriceFromDB()
+}
+
+WhiteRose --|> OldRosesInterface
+RedRose --|> OldRosesInterface
+
+
+
+class WhiteRose
+class RedRose
+
+Keyboard --|> ProductInterface
+Mouse --|> ProductInterface
+
+
+@enduml

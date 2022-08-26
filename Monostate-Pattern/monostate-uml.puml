@@ -1,0 +1,7 @@
+@startuml
+class Monostate{
+private static Variables
++dynamic getters / setters
+}
+
+@enduml

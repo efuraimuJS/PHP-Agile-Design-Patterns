@@ -1,0 +1,21 @@
+@startuml
+
+class ProuctOrder
+class ServiceOrder
+
+class Order<<interface>>{
++place()
+}
+class CompositeOrder{
++add(:Order)
++place()
+}
+
+ProuctOrder --|> Order
+ServiceOrder --|> Order
+CompositeOrder --|> Order
+
+CompositeOrder "0..*"-->"<<delegates>>"Order
+
+
+@enduml

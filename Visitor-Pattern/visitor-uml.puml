@@ -1,0 +1,44 @@
+@startuml
+class Client
+class PaymentMethod<<interface>>{
++getDescription()
+}
+class VisaPayment{
++getDescription()
++accept(:PaymentVisitor)
+}
+class PaypalPayment{
++getDescription()
++accept(:PaymentVisitor)
+}
+
+class PaymentVisitor<<interface>>{
++visit(:PaymentMethod)
++getDescription()
+}
+
+class HtmlPaymentDescription{
++getDescription()
++visit(:PaymentMethod)
+
+}
+
+class SimplePaymentDescription{
++getDescription()
++visit(:PaymentMethod)
+
+}
+
+Client --> PaymentMethod
+HtmlPaymentDescription --> PaymentMethod
+SimplePaymentDescription --> PaymentMethod
+
+VisaPayment --|> PaymentMethod
+PaypalPayment --|> PaymentMethod
+
+HtmlPaymentDescription --|> PaymentVisitor
+SimplePaymentDescription --|> PaymentVisitor
+
+VisaPayment --> PaymentVisitor
+PaypalPayment --> PaymentVisitor
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+class Buyer
+class Payment
+class Creditpayment
+class dir_VisaCredit
+class dir_MatercardCredit
+class cred_VisaCredit
+class cred_MatercardCredit
+class Directpayment
+
+Buyer --> Payment
+Creditpayment --|> Payment
+Directpayment --|> Payment
+
+cred_VisaCredit --|> Creditpayment
+cred_MatercardCredit --|> Creditpayment
+
+dir_VisaCredit --|> Directpayment
+dir_MatercardCredit --|> Directpayment
+@enduml

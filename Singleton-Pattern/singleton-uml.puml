@@ -1,0 +1,13 @@
+@startuml
+class Singleton{
+- instance: Singleton
+- __constructor()
++ getInstance():Singleton
+}
+
+class PriceCalculator
+class DiscountProvider
+
+PriceCalculator --> DiscountProvider
+
+@enduml
